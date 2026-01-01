@@ -4,11 +4,13 @@ import Experience from '../assets/SVGs/experience sticky note.svg'
 import Projects from '../assets/SVGs/project sticky note.svg'
 import Personal from '../assets/SVGs/personal-sticky-note.svg'
 //import { defineComponent } from 'vue'
-import SideBar from '@/components/LandingPage/LandingPageSideBar.vue'
+import LandingPageSideBar from '@/components/LandingPage/LandingPageSideBar.vue'
+import LandingPageOverview from '@/components/LandingPage/LandingPageOverview.vue'
 
 export default {
   components: {
-    SideBar,
+    LandingPageSideBar,
+    LandingPageOverview,
   },
 
   data() {
@@ -47,7 +49,8 @@ export default {
 <template>
   <nav>
     <div>
-      <SideBar :items="sidebarItems" />
+      <LandingPageOverview />
+      <!--<SideBar :items="sidebarItems" /> -->
     </div>
   </nav>
 </template>

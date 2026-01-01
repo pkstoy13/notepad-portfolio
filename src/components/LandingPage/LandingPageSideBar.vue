@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'SideBar',
+  name: 'LandingPageSideBar',
   props: {
     items: {
       type: Array as () => {
