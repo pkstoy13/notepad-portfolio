@@ -1,0 +1,22 @@
+:root {
+  --color-black: #02020a;
+  --color-teal: #17bebb;
+  --color-porcelain: #fdfff7;
+  --color-brown: #938274;
+  --color-yellow: #ffed65;
+}
+
+body {
+  min-height: 90vh;
+  margin: 0;
+  color: var(--color-black);
+  background: var(--color-porcelain);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
