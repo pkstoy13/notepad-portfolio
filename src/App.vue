@@ -4,6 +4,7 @@
 
 <template>
   <div class="notebook">
+    <div class="paper-shadow"></div>
     <div class="page-content">
       <RouterView />
     </div>
@@ -37,7 +38,7 @@
 
 .page-content {
   margin-left: 96px;
-  padding: 48px;
+  padding: 36px;
   max-width: 1100px;
 }
 
@@ -61,4 +62,20 @@
   pointer-events: none;
   z-index: 1;
 }
+
+.paper-shadow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    transparent 12%,
+    transparent 88%,
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
 </style>
