@@ -15,19 +15,14 @@
   --paper: #fbf7ef;
   --line: rgba(0, 0, 0, 0.8);
   --margin: rgba(200, 80, 80, 1);
+  --header-gap: 72px;
 
   position: fixed;
   inset: 0;
-  background:
-    /* horizontal ruled lines */
-    repeating-linear-gradient(to bottom, transparent, transparent 27px, var(--line) 28px),
-    /* paper color */ var(--paper);
-
+  background: var(--paper);
   font-family: 'Patrick Hand', 'Inter', sans-serif;
-
-  background-blend-mode: multiply;
-  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.03);
 }
+
 
 .notebook::before {
   content: '';
@@ -37,6 +32,7 @@
   width: 2px;
   height: 100%;
   background: var(--margin);
+  z-index: 2;
 }
 
 .page-content {
@@ -48,14 +44,21 @@
 .notebook::after {
   content: '';
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
+  top: var(--header-gap);
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: repeating-linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2),
-    transparent 15%,
-    transparent 85%,
-    rgba(0, 0, 0, 0.2)
+    transparent,
+    transparent 27px,
+    var(--line) 28px
   );
+
+
+
+  pointer-events: none;
+  z-index: 1;
 }
 </style>
